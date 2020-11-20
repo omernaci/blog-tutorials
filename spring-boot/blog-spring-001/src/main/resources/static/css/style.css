@@ -1,0 +1,120 @@
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Varela+Round);
+
+body {
+  font-family: "Varela Round", sans-serif;
+  font-style: normal;
+  line-height: 1.5;
+  background: #eee;
+  overflow-x: hidden;
+}
+
+#pageloader
+{
+  background: rgba( 255, 255, 255, 0.8 );
+  display: none;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+#pageloader img
+{
+  left: 50%;
+  margin-left: -32px;
+  margin-top: -32px;
+  position: absolute;
+  top: 50%;
+}
+
+.txt-dark {
+    color: #2f2c2c !important;
+}
+
+.clearfix {
+    overflow: hidden;
+    clear: both;
+    float: none;
+}
+
+.heading-text {
+	display: inline-block;
+    position: relative;
+    -webkit-flex: 0 0 100%;
+    flex: 0 0 100%;
+    font-size: calc(1rem + .75vw);
+    margin-bottom: 0;
+    color: #000;
+    font-weight: 700;
+}
+
+.heading-text:after {
+	display: block;
+    content: "";
+    margin: 1rem 0;
+    width: 3rem;
+    height: 1px;
+    border-bottom: .3rem solid #3cb878;
+}
+
+h6, .panel-title {
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+p.text-muted {
+    font-size: 14px;
+}
+
+.text-muted {
+    color: #777;
+}
+
+/* Navbar */
+
+nav.navbar {
+    background: #6db33f;
+    color: #fff;
+    border-bottom: none;
+    border-radius: 0;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2);
+    padding: 15px 0;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+nav.navbar .navbar-toggle {
+    background: #fff;
+    color: #333;
+    border: none;
+    border-radius: 0;
+}
+
+nav.navbar a.navbar-brand {
+    color: #fff;
+    font-weight: 600;
+}
+
+nav.navbar .navbar-collapse {
+    border: none;
+}
+
+nav.navbar ul.navbar-nav {
+    border: none;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: #fff !important;
+}
+
+.nav>li>a:hover {
+	color: #6d7fcc !important;
+}
+
+}

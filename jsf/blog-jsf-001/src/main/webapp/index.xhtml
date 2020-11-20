@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<ui:composition template="/template/BlogTemplate.xhtml">
+	<ui:define name="blogCss">
+		<!-- Custom Styles -->
+	</ui:define>
+	<ui:define name="blogBody">
+		<div class="container">
+			<div class="row">
+				<div class="jumbotron">
+					<h2>JSF Bootstrap Initialization</h2>
+					<p>This example describes how to use the Bootstrap and Jquery
+						libraries in JSF technology.</p>
+					<h3 id="jquery-version"></h3>
+					
+					<h:commandButton
+						action="#{applicationBean.action()}"
+						value="Open Bootstrap Modal" styleClass="btn btn-default"
+						onclick="$('#jsf-modal').modal('show');" 
+						immediate="true">
+					</h:commandButton>
+				</div>
+			</div>
+		</div>
+		<h:form id="modal-form">
+			<div class="modal fade" id="jsf-modal" tabindex="-1" role="dialog"
+				aria-labelledby="myModalLabel" aria-hidden="true"
+				style="display: none;">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+							<h5>JSF Modal Example</h5>
+						</div>
+						<div class="modal-body">
+							<h5>This project includes the followings examples:</h5>
+							<ul class="list-group">
+								<li class="list-group-item">JSF SweetAlert Example</li>
+								<li class="list-group-item">JSF JQuery Knob Example</li>
+								<li class="list-group-item">JSF Bootstrap Modal Example</li>
+							</ul>
+						</div>
+						<div class="modal-footer"></div>
+					</div>
+				</div>
+			</div>
+		</h:form>
+	</ui:define>
+	<ui:define name="blogScript">
+		<script type="text/javascript">
+				//<![CDATA[
+				 $(document).ready(function() {
+		            $('#jquery-version').text('jQuery Version : ' + jQuery().jquery);
+		         });	
+				//]]>
+			</script>
+	</ui:define>
+</ui:composition>
+</html>

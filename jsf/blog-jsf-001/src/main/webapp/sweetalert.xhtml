@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+	<ui:composition template="/template/BlogTemplate.xhtml">
+		<ui:define name="blogCss">
+			<!-- Custom Styles -->
+		</ui:define>
+		<ui:define name="blogBody">
+			<div class="container">
+				<div class="row">
+					<div class="jumbotron">
+						<h2>JSF Sweet Alert Example</h2>
+						<p>This example describes how to use the Sweet Alert message in JSF.</p>				
+					</div>
+				</div>
+			</div>
+		</ui:define>
+		<ui:define name="blogScript">
+			<script type="text/javascript">
+				//<![CDATA[
+				 $(document).ready(function() {
+					 /* Faces Message */
+				    if (#{
+				            applicationBean.hasMessage
+				        }) {
+				        var message = '#{applicationBean.errorMessage}';
+				        swal('Info', message, 'info');
+				    }
+		         });	
+				//]]>
+			</script>
+		</ui:define>
+	</ui:composition>
+</html>

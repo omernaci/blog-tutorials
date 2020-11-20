@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="common/header :: common-header"/>
+<body>
+<head th:replace="common/header :: navbar"/>
+
+<div class="container">
+    <div class="jumbotron">
+	    <h1>Spring Boot Thymeleaf Integration</h1>
+	    <p class="lead">Post List</p>
+	    <table class="table table-hover">
+	    	<tr>
+		      <th scope="col">Title</th>
+		      <th scope="col">Description</th>
+		    </tr>
+		    <tr th:each="post : ${postList}"> 
+		    	<td th:text="${post.title}"></td>
+		    	<td th:text="${post.description}"></td>
+		    </tr>
+	    </table>
+	</div>
+</div>
+
+
+<div th:replace="common/header :: body-bottom-scripts"/>
+
+<script th:inline="javascript">
+	/*<![CDATA[*/
+		$(document).ready(function(){
+	
+		});
+	/*]]>*/
+</script>
+
+</body>
+</html>

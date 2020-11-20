@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<ui:composition template="/template/BlogTemplate.xhtml">
+	<f:metadata>
+		<f:viewParam name="code" value="#{applicationBean.authorizationCode}"></f:viewParam>
+		<f:event type="preRenderView" listener="#{applicationBean.getAccessTokenFromAuthorizationCode()}" />
+	</f:metadata>
+	<ui:define name="blogCss">
+		<!-- Custom Styles -->
+	</ui:define>
+	<ui:define name="blogBody">
+		<div class="jumbotron">
+		    <h1>JSF Apache Oltu OAuth2 Client</h1>
+		    <div class="row">
+		    	<h:form>
+			    	<div class="col">
+			    		Username : <h:outputLabel value="#{applicationBean.githubUser.login}" />
+			    	</div>
+			    	<div class="col">
+			    		Public Repos : <h:outputLabel value="#{applicationBean.githubUser.publicRepos}" />
+			    	</div>
+		    	</h:form>
+			</div>
+		</div>
+	</ui:define>
+	<ui:define name="blogScript">
+		<script type="text/javascript">
+				//<![CDATA[
+				 $(document).ready(function() {
+		         });	
+				//]]>
+			</script>
+	</ui:define>
+</ui:composition>
+</html>

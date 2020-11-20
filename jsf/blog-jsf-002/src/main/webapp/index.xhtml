@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<ui:composition template="/template/BlogTemplate.xhtml">
+	<ui:define name="blogCss">
+		<!-- Custom Styles -->
+	</ui:define>
+	<ui:define name="blogBody">
+		<div class="jumbotron">
+		    <h1>JSF Apache Oltu OAuth2 Client</h1>
+		    <p class="lead"></p>
+		    <h:form>
+				<h:commandButton action="#{applicationBean.authWithGithub()}" value="Sign in with Github" styleClass="btn btn-default"/>
+			</h:form>
+		</div>
+	</ui:define>
+	<ui:define name="blogScript">
+		<script type="text/javascript">
+				//<![CDATA[
+				 $(document).ready(function() {
+		         });	
+				//]]>
+			</script>
+	</ui:define>
+</ui:composition>
+</html>

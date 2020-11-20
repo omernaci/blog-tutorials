@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<ui:composition template="/template/BlogTemplate.xhtml">
+		<ui:define name="blogCss">
+			<!-- Custom Styles -->
+		</ui:define>
+		<ui:define name="blogBody">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="jumbotron">
+						<h2>JSF Bootstrap jQuery Initialization</h2>
+						<p>This example describes how to use the Jquery Knob Component in JSF.</p>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-4">
+						<div class="knob-card">
+							<div class="col-md-6">
+								<h4 style="color: #009688;">Success</h4>	
+							</div>
+							<div class="col-md-6">
+								<input type="text" class="dial" value="#{applicationBean.value}" data-width="80" data-height="80" data-fgcolor="#009688" readonly="readonly"/>	
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="knob-card">
+							<div class="col-md-6">
+								<h4 style="color: #856404;">Warning</h4>	
+							</div>
+							<div class="col-md-6">
+								<input type="text" class="dial" value="#{applicationBean.value}" data-width="80" data-height="80" data-fgcolor="#856404" readonly="readonly"/>	
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="knob-card">
+							<div class="col-md-6">
+								<h4 style="color: #721c24;">Danger</h4>	
+							</div>
+							<div class="col-md-6">
+								<input type="text" class="dial" value="#{applicationBean.value}" data-width="80" data-height="80" data-fgcolor="#721c24" readonly="readonly"/>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</ui:define>
+		<ui:define name="blogScript">
+			<script type="text/javascript">
+				//<![CDATA[
+					$(document).ready(function() {
+						$(".dial").knob({
+						    'min':0,
+						    'max':100,
+						    'thickness':.2
+						});
+   					}); 
+				//]]>
+			</script>
+		</ui:define>
+	</ui:composition>
+</html>
